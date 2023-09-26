@@ -1,0 +1,51 @@
+.container_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.879);
+}
+
+.wellcomesec_textcontainer {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.885);
+    flex-direction: column;
+    gap: 10px;
+    font-size: 36px;
+    .svg_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .svg {
+            &:hover {
+                fill: white;
+            }
+        }
+    }
+}
+
+.name_color {
+    color: rgb(255, 123, 0);
+}
+
+.btn_wellcomesec {
+    background-color: transparent;
+    color: #ffffffb5;
+    border: 1px solid #ffffffb5;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    cursor: pointer;
+    &:hover {
+        color: rgb(255, 123, 0);
+        border: 1px solid rgb(255, 123, 0);
+    }
+}

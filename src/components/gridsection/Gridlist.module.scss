@@ -1,0 +1,21 @@
+.project_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 50px auto;
+    gap: 50px;
+}
+
+.title{
+        text-transform: uppercase;
+        font-size: 36px;
+}
+
+.grid_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

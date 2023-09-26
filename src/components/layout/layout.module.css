@@ -1,0 +1,21 @@
+.container_layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+}
+
+.nav_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  text-transform: uppercase;
+}
+.nav_container li {
+  color: white;
+}
+.nav_container li:hover {
+  color: rgb(255, 123, 0);
+}/*# sourceMappingURL=layout.module.css.map */
