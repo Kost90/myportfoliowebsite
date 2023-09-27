@@ -16,8 +16,8 @@ const Homepage = () => {
           <Counter setIsOpen={handleToggle}/>
         ) : (
           <>
-           <WellcomeSection/>
             <Layout>
+            <WellcomeSection/>
             <Gridlist/>
             </Layout>
           </>

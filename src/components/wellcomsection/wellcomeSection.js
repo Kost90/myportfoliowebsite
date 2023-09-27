@@ -1,7 +1,8 @@
 import React from 'react'
 import GitHub from '../../images/assets/icons8-github-60.svg'
 import LinkeDin from '../../images/assets/icons8-linkedin-48.svg'
-import {container_center, wellcomesec_textcontainer, name_color, btn_wellcomesec, svg_container, svg} from './wellcomesection.module.css'
+import Picture from '../../images/assets/rocket.svg'
+import {container_center, wellcomesec_textcontainer, name_color, btn_wellcomesec, svg_container, svg, svg_rocket} from './wellcomesection.module.css'
 
 function WellcomeSection() {
   return (
@@ -15,6 +16,7 @@ function WellcomeSection() {
             </div>
             <button className={btn_wellcomesec}>View my projects</button>
         </div>
+        <Picture className={svg_rocket}/>
     </section>
   )
 }
