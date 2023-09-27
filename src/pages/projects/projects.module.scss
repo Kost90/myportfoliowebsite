@@ -1,0 +1,68 @@
+.container_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.879);
+    height: 100vh;
+}
+
+.container_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    max-width: 1020px;
+}
+
+.img_container{
+    max-width: 650px;
+}
+
+.title_project{
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px auto;
+    color: rgba(255, 255, 255, 0.874);
+}
+
+.progbars_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.874);
+}
+
+.description_container{
+    max-width: 1020px;
+    margin: 30px auto;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.874);
+}
+
+.btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    border:1px solid rgb(255, 123, 0);
+    color: rgb(255, 123, 0);
+    text-transform: uppercase;
+    &:hover{
+        color: white;
+    }
+}

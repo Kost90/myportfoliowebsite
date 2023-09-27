@@ -1,0 +1,23 @@
+
+.progressbar_container{
+    position: relative;
+    display:flex;
+    width: 350px;
+    height: 15px;
+    border-radius: 5px;
+    align-items: flex-start;
+    // justify-content: center;
+    margin: auto;
+}
+
+.progressbar_percent{
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(230, 218, 218);
+    border-radius: 10px;
+    font-weight: bold;
+}
+

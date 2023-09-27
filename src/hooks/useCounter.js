@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 let intervalID = null;
 
-export function useCounter(initialValue = 0, delay = 50, step = 1) {
+export function useCounter(initialValue = 0, delay = 30, step = 1) {
   const [count, setCount] = useState(initialValue)
  
   const start = () => {
