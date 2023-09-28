@@ -1,8 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useStaticQuery, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import GridItem from "../griditem/GridItem";
-import {projects_section, grid_list_container, grid_container, title} from './Gridlist.module.css'
+import {projects_section, grid_list_container, grid_container, border_title_container, title_section, border_div} from './Gridlist.module.css'
 
 function Gridlist() {
   const data = useStaticQuery(graphql`
@@ -30,7 +31,20 @@ function Gridlist() {
   return (
     <section className={projects_section}>
       <div className={grid_list_container}>
-      <h1 className={title}>My projects:</h1>
+      <div className={border_title_container}>
+        <motion.h1 
+         initial={{
+          y: -100,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ amount: 0.2, once: true }}
+        className={title_section}>my projects</motion.h1>
+        <div className={border_div}></div>
+        </div>
       <div className={grid_container}>
         {data.allMdx.nodes.map((node) => (
           <GridItem

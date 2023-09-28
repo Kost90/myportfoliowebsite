@@ -18,6 +18,19 @@ function SkillsSection () {
         },
       };
 
+      const textVariants = {
+        hidden: {
+          x: 100,
+          opacity: 0,
+        },
+        visible:{
+          x: 0,
+          opacity: 1,
+          ease: "easeOut",
+          transition: { duration: 0.5},
+        },
+      };
+
     const data = useStaticQuery(graphql`
     query{
         mdx(frontmatter: {key: {eq: "about"}}) {
@@ -39,11 +52,31 @@ function SkillsSection () {
   return (
     <div className={container_skillssec}>
         <div className={border_title_container}>
-        <h1 className={title_section}>ABOUT ME</h1>
+        <motion.h1 
+         initial={{
+          y: -100,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ amount: 0.2, once: true }}
+        className={title_section}>ABOUT ME</motion.h1>
         <div className={border_div}></div>
         </div>
         <div className={container_content}>
-        <div className={skills_img_flex}>
+        <motion.div 
+        initial={{
+          x: -100,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ amount: 0.2, once: true }}
+        className={skills_img_flex}>
         <GatsbyImage
             image={image}
             alt={data.mdx.frontmatter.hero_image_alt}
@@ -63,8 +96,13 @@ function SkillsSection () {
             >{node}</motion.li>
            ))}
         </ul> 
-        </div>
-        <p className={text_container}>{data.mdx.excerpt}</p>
+        </motion.div>
+        <motion.p 
+        initial={'hidden'}
+        whileInView={'visible'}
+        viewport={{ amount: 0.2, once: true }}
+        variants={textVariants}
+        className={text_container}>{data.mdx.excerpt}</motion.p>
         </div>
        
     </div>

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 20px 250px 20px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #000000, #181818, #292929, #3b3b3b, #676767, #979797, #cacaca, #ffffff);
+}
+.container h1 {
+  font-size: 26px;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 190px;
+    padding-top: 50px;
+  }
+  .container h1 {
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+  }
+}/*# sourceMappingURL=Contact.module.css.map */

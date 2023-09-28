@@ -6,6 +6,7 @@ import WellcomeSection from "../components/wellcomsection/wellcomeSection";
 import Gridlist from "../components/gridsection/Gridlist";
 import Layout from "../components/layout/layout";
 import SkillsSection from "../components/skillssection/SkillsSection";
+import Contact from "../components/contact/Contact";
 
 const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const Homepage = () => {
             <WellcomeSection/>
             <SkillsSection/>
             <Gridlist/>
+            <Contact/>
             </Layout>
           </>
         )}
