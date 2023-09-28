@@ -1,8 +1,9 @@
 import React, { memo, useCallback } from "react";
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { string, object } from "yup";
-import { yupResolver } from "@hookform/resolvers/yup"
-import {flex_container_form} from './ContactForm.module.css'
+import { yupResolver } from "@hookform/resolvers/yup";
+import { flex_container_form } from "./ContactForm.module.css";
 
 const phoneNumberRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 
@@ -20,6 +21,30 @@ const contactSchema = {
 };
 
 const ContactForm = memo(() => {
+  const rightAnimation = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.7 },
+    },
+  };
+
+  const leftAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.7 },
+    },
+  };
+
   const {
     register,
     handleSubmit,
@@ -36,31 +61,47 @@ const ContactForm = memo(() => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={flex_container_form}>
-      <input
+      <motion.input
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={rightAnimation}
         type="text"
         {...register("name", { required: true })}
         placeholder="Enter your full name"
       />
       {errors.text && <div style={{ color: "red" }}>Enter your name</div>}
-      <input
+      <motion.input
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={leftAnimation}
         type="email"
         {...register("email", { required: true })}
         placeholder="Enter your email"
       />
       {errors.email && <div style={{ color: "red" }}>Enter your email</div>}
-      <input
+      <motion.input
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={rightAnimation}
         type="number"
         {...register("phone", { minLength: 8, maxLength: 25 })}
         placeholder="Enter you phone number"
       />
       {errors.phone && <div style={{ color: "red" }}>Enter your number</div>}
 
-      <textarea
+      <motion.textarea
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={leftAnimation}
         cols="30"
         rows="10"
         {...register("comment", { required: true })}
         placeholder="Leave your comment"
-      ></textarea>
+      ></motion.textarea>
       <button type="submit">SEND</button>
     </form>
   );

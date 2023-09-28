@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import Logo from "../../images/assets/Logo.svg";
 import { container_layout, nav_container, svg_size } from "./layout.module.css";
+import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
         </ul>
       </nav>
       <main>{children}</main>
+      <Footer/>
     </div>
   );
 };

@@ -1,0 +1,23 @@
+.footer_container{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.svg_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .svg {
+        &:hover {
+            fill: white;
+        }
+    }
+}
+
+.svg_size{
+    width: 150px;
+    height: 100px;
+}
