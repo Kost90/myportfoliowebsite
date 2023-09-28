@@ -70,4 +70,8 @@
 .btn_wellcomesec:hover {
   color: rgb(255, 123, 0);
   border: 1px solid rgb(255, 123, 0);
+}
+
+.display_none {
+  display: none;
 }/*# sourceMappingURL=wellcomesection.module.css.map */

@@ -1,12 +1,23 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { motion } from "framer-motion"
 import GitHub from '../../images/assets/icons8-github-60.svg'
 import LinkeDin from '../../images/assets/icons8-linkedin-48.svg'
 import Picture from '../../images/assets/rocket.svg'
-import {container_center, wellcomesec_textcontainer, name_color, btn_wellcomesec, svg_container, svg, svg_rocket} from './wellcomesection.module.css'
+import {container_center, wellcomesec_textcontainer, name_color, btn_wellcomesec, svg_container, svg, svg_rocket, display_none} from './wellcomesection.module.css'
 
 function WellcomeSection() {
 
+  const screenWidth = typeof window !== 'undefined' ? window.screen.width : null;
+  const [isShow, setIsShow] = useState(false);
+  
+useEffect(() =>{
+  if (screenWidth >= 768) {
+    return;
+  } else {
+    setIsShow(!isShow);
+  }
+},[])
+    
   return (
     <motion.section 
     initial={{ opacity: 0 }}
@@ -24,7 +35,7 @@ function WellcomeSection() {
             </div>
             <button className={btn_wellcomesec}>View my projects</button>
         </div>
-        <Picture className={svg_rocket}/>
+        {isShow?null:<Picture className={svg_rocket}/>}
     </motion.section>
   )
 }
