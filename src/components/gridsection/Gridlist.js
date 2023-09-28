@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import GridItem from "../griditem/GridItem";
-import {project_section, grid_container, title} from './Gridlist.module.css'
+import {projects_section, grid_list_container, grid_container, title} from './Gridlist.module.css'
 
 function Gridlist() {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,8 @@ function Gridlist() {
   `);
 
   return (
-    <section className={project_section}>
+    <section className={projects_section}>
+      <div className={grid_list_container}>
       <h1 className={title}>My projects:</h1>
       <div className={grid_container}>
         {data.allMdx.nodes.map((node) => (
@@ -41,6 +42,7 @@ function Gridlist() {
             slug={node.frontmatter.slug}
           />
         ))}
+      </div>
       </div>
     </section>
   );

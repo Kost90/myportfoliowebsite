@@ -1,8 +1,8 @@
 .container_layout {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-around;
+  padding: 10px;
   background-color: black;
 }
 
@@ -18,4 +18,9 @@
 }
 .nav_container li:hover {
   color: rgb(255, 123, 0);
+}
+
+.svg_size {
+  width: 150px;
+  height: 100px;
 }/*# sourceMappingURL=layout.module.css.map */
