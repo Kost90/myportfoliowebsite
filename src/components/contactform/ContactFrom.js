@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { flex_container_form } from "./ContactForm.module.css";
 import emailjs from '@emailjs/browser';
 
-const key = process.env.REACT_APP_PUBLIC_KEY;
+// const key = process.env.REACT_APP_PUBLIC_KEY;
 
 const phoneNumberRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 
@@ -59,7 +59,7 @@ const ContactForm = memo(() => {
   });
 
   const onSubmit = useCallback(() => {
-    emailjs.sendForm('portfolio', 'contact_form', form.current, key)
+    emailjs.sendForm('portfolio', 'contact_form', form.current, `${process.env.GATSBY_PUBLIC_KEY}`)
     console.log('email send');
     reset();
   }, []);
