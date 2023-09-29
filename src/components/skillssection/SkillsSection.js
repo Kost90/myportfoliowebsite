@@ -104,7 +104,6 @@ function SkillsSection () {
         variants={textVariants}
         className={text_container}>{data.mdx.excerpt}</motion.p>
         </div>
-       
     </div>
   )
 }

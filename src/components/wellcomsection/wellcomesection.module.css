@@ -1,14 +1,9 @@
 .container_center {
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  margin: auto;
+  align-items: center;
   height: 100vh;
-  width: 100%;
-  background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.9641106443) 15%, rgb(0, 0, 0) 73%, rgb(252, 252, 252) 100%);
-  gap: 50px;
   padding-top: 60px;
 }
 
@@ -20,7 +15,7 @@
   color: rgba(255, 255, 255, 0.885);
   flex-direction: column;
   gap: 10px;
-  font-size: 26px;
+  font-size: 22px;
   text-align: center;
 }
 .wellcomesec_textcontainer .svg_container {
@@ -32,39 +27,28 @@
   fill: white;
 }
 
-.svg_rocket {
-  width: 250px;
-  height: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  animation: rocket 5s infinite linear alternate;
-}
-
-@keyframes rocket {
-  0% {
-    fill: rgb(251, 82, 3);
-    top: 20%;
-  }
-  25% {
-    fill: rgb(245, 169, 5);
-  }
-  50% {
-    fill: rgb(144, 244, 5);
-  }
-  75% {
-    fill: rgb(5, 249, 245);
-  }
-  100% {
-    fill: rgb(250, 250, 250);
-    top: 30%;
-  }
-}
 .name_color {
   color: rgb(255, 123, 0);
+  animation: name 5s infinite linear alternate;
 }
 
+@keyframes name {
+  0% {
+    color: rgb(251, 82, 3);
+  }
+  25% {
+    color: rgb(245, 169, 5);
+  }
+  50% {
+    color: rgb(144, 244, 5);
+  }
+  75% {
+    color: rgb(5, 249, 245);
+  }
+  100% {
+    color: rgb(250, 250, 250);
+  }
+}
 .btn_wellcomesec {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7098039216);
@@ -74,7 +58,7 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 .btn_wellcomesec:hover {
@@ -91,11 +75,10 @@
 
 @media (min-width: 768px) {
   .container_center {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: auto;
+    margin: 0 auto;
     height: 100vh;
     width: 100%;
     background: rgb(0, 0, 0);
@@ -112,8 +95,6 @@
     flex-direction: column;
     gap: 10px;
     font-size: 36px;
-    position: absolute;
-    left: 15%;
   }
   .wellcomesec_textcontainer .svg_container {
     display: flex;
@@ -122,37 +103,6 @@
   }
   .wellcomesec_textcontainer .svg_container .svg:hover {
     fill: white;
-  }
-  .svg_rocket {
-    width: 350px;
-    height: 200px;
-    position: absolute;
-    left: 65%;
-    top: 20%;
-    transform: translate(-50%, 0%);
-    animation: rocket 5s infinite linear alternate;
-  }
-  @keyframes rocket {
-    0% {
-      fill: rgb(251, 82, 3);
-      top: 20%;
-    }
-    25% {
-      fill: rgb(245, 169, 5);
-    }
-    50% {
-      fill: rgb(144, 244, 5);
-    }
-    75% {
-      fill: rgb(5, 249, 245);
-    }
-    100% {
-      fill: rgb(250, 250, 250);
-      top: 30%;
-    }
-  }
-  .name_color {
-    color: rgb(255, 123, 0);
   }
   .btn_wellcomesec {
     font-size: 26px;

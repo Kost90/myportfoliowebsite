@@ -81,18 +81,9 @@
 
 @media (min-width: 768px) {
   .flex_container_form {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
     min-width: 600px;
-    gap: 20px;
   }
   .flex_container_form input {
-    display: flex;
-    padding: 5px;
-    border-bottom: 2px solid rgb(187, 181, 181);
     min-width: 600px;
     color: white;
     cursor: pointer;

@@ -15,16 +15,10 @@
 
 @media (min-width: 768px) {
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     padding-bottom: 50px;
     padding-top: 50px;
   }
   .container h1 {
     font-size: 36px;
-    color: white;
-    text-transform: uppercase;
   }
 }/*# sourceMappingURL=Contact.module.css.map */

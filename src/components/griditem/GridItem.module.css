@@ -80,31 +80,8 @@
 }
 @media (min-width: 768px) {
   .item_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 400px;
     min-height: 270px;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.558);
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  .item_container h1 {
-    display: none;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: rgb(255, 123, 0);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  .item_container button {
-    display: none;
-    position: absolute;
-    bottom: 40%;
   }
   .item_container .img_container {
     width: 100%;
