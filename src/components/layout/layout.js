@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Logo from "../../images/assets/Logo.svg";
-import { container_layout, nav_container, svg_size } from "./layout.module.css";
+import { container_layout, nav_container, svg_size, overflow } from "./layout.module.css";
 import Footer from "../Footer/Footer";
 
 const Layout = ({children }) => {
@@ -18,7 +18,7 @@ const Layout = ({children }) => {
           </div>
         </ul>
       </nav>
-      <main>{children}</main>
+      <main className={overflow}>{children}</main>
       <Footer/>
     </div>
   );

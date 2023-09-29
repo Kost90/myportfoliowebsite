@@ -33,6 +33,9 @@
   gap: 20px;
   color: white;
 }
+.skills_img_flex img {
+  border-radius: 50%;
+}
 
 .border_title_container {
   display: flex;

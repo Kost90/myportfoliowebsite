@@ -1,7 +1,7 @@
 .container_center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.9641106443) 15%, rgb(0, 0, 0) 73%, rgb(252, 252, 252) 100%);
   padding-top: 60px;
