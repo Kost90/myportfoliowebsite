@@ -4,7 +4,8 @@ import Logo from "../../images/assets/Logo.svg";
 import { container_layout, nav_container, svg_size } from "./layout.module.css";
 import Footer from "../Footer/Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({children }) => {
+
   return (
     <div>
       <nav className={container_layout}>
@@ -13,12 +14,6 @@ const Layout = ({ children }) => {
           <div className={nav_container}>
             <li>
               <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">Projects</Link>
-            </li>
-            <li>
-              <Link to="/">Contact</Link>
             </li>
           </div>
         </ul>

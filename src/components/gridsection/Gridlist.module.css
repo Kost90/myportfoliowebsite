@@ -8,11 +8,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1440px;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  gap: 50px;
+  padding: 30px 10px;
+  gap: 10px;
 }
 
 .grid_container {
@@ -20,6 +18,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: auto 10px;
 }
 
 .border_title_container {
@@ -28,11 +27,11 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .title_section {
-  font-size: 36px;
+  font-size: 26px;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
@@ -42,4 +41,33 @@
   width: 150px;
   height: 2px;
   background-color: black;
+}
+
+@media (min-width: 768px) {
+  .projects_section {
+    margin: 0 auto;
+    background-image: linear-gradient(to top, #000000, #000000, #000000, #000000, #000000, #181818, #292929, #3b3b3b, #676767, #979797, #cacaca, #ffffff);
+  }
+  .grid_list_container {
+    max-width: 1440px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 50px;
+  }
+  .border_title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+  }
+  .title_section {
+    font-size: 36px;
+  }
+  .border_div {
+    width: 150px;
+    height: 2px;
+    background-color: black;
+  }
 }/*# sourceMappingURL=Gridlist.module.css.map */

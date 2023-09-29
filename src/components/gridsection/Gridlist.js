@@ -1,11 +1,11 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import { motion } from "framer-motion";
 import { useStaticQuery, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import GridItem from "../griditem/GridItem";
 import {projects_section, grid_list_container, grid_container, border_title_container, title_section, border_div} from './Gridlist.module.css'
 
-function Gridlist() {
+function Gridlist(props,ref) {
   const data = useStaticQuery(graphql`
     query {
       allMdx(filter: { frontmatter: { key: { eq: "card" } } }) {
@@ -29,7 +29,7 @@ function Gridlist() {
   `);
 
   return (
-    <section className={projects_section}>
+    <section ref={ref} className={projects_section}>
       <div className={grid_list_container}>
       <div className={border_title_container}>
         <motion.h1 
@@ -62,4 +62,4 @@ function Gridlist() {
   );
 }
 
-export default Gridlist;
+export default forwardRef(Gridlist);

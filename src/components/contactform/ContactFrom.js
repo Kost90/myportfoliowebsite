@@ -1,9 +1,10 @@
-import React, { memo, useCallback } from "react";
+import React, { memo, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { string, object } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { flex_container_form } from "./ContactForm.module.css";
+import emailjs from '@emailjs/browser';
 
 const phoneNumberRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 
@@ -21,6 +22,7 @@ const contactSchema = {
 };
 
 const ContactForm = memo(() => {
+  const form = useRef(null);
   const rightAnimation = {
     hidden: {
       x: 100,
@@ -54,13 +56,14 @@ const ContactForm = memo(() => {
     resolver: yupResolver(object().shape(contactSchema)),
   });
 
-  const onSubmit = useCallback((data) => {
-    console.log(data);
+  const onSubmit = useCallback(() => {
+    emailjs.sendForm('portfolio', 'contact_form', form.current, 'd6kWRCJ_PncEG8pQY')
+    console.log('email send');
     reset();
   }, []);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={flex_container_form}>
+    <form onSubmit={handleSubmit(onSubmit)} className={flex_container_form} ref={form}>
       <motion.input
         initial="hidden"
         whileInView="visible"

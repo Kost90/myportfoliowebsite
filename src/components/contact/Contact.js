@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import { motion } from "framer-motion";
 import ContactForm from '../contactform/ContactFrom';
 import {container} from './Contact.module.css'
 
-function Contact() {
+function Contact(props,ref) {
   return (
-    <div className={container}>
+    <div className={container} ref={ref}>
         <motion.h1
         initial={{
           y: -100,
@@ -21,4 +21,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default forwardRef(Contact)
