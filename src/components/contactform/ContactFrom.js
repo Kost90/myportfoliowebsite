@@ -60,7 +60,6 @@ const ContactForm = memo(() => {
 
   const onSubmit = useCallback(() => {
     emailjs.sendForm('portfolio', 'contact_form', form.current, `${process.env.GATSBY_PUBLIC_KEY}`)
-    console.log('email send');
     reset();
   }, []);
 
