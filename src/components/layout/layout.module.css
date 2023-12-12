@@ -1,7 +1,3 @@
-.overflow {
-  overflow: hidden;
-}
-
 .container_layout {
   display: flex;
   align-items: center;
