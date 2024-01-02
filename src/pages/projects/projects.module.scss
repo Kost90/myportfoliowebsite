@@ -5,7 +5,7 @@
     flex-direction: column;
     margin: 0 auto;
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0.9641106442577031) 15%, rgba(0,0,0,1) 73%, rgba(252,252,252,1) 100%);
+    // background: linear-gradient(180deg, rgba(0,0,0,0.9641106442577031) 15%, rgba(0,0,0,1) 73%, rgba(252,252,252,1) 100%);
 }
 
 .container_flex{
@@ -26,7 +26,7 @@
     text-transform: uppercase;
     text-align: center;
     margin: 20px auto;
-    color: rgba(255, 255, 255, 0.874);
+    color: rgb(255, 123, 0);
 }
 
 .progbars_container{
@@ -79,8 +79,8 @@
         align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,0.9641106442577031) 15%, rgba(0,0,0,1) 73%, rgba(252,252,252,1) 100%);
+        background: rgba(0, 0, 0, 0.919);
+        min-height:100vh;
         // height: 100vh;
     }
     
@@ -92,6 +92,7 @@
     
     .title_project{
         font-size: 36px;
+        color: rgb(255, 123, 0);
     }
     
     .progbars_container{
